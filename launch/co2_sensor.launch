@@ -1,0 +1,19 @@
+<launch>
+
+	<machine 
+		name = "ubiquityrobot"
+		address = "192.168.1.71"
+		env-loader = "/home/ubuntu/catkin_ws/devel/env.sh"
+		user = "ubuntu"
+                password = "ubuntu"
+	/>
+
+
+	<node 
+		machine = "ubiquityrobot"
+		name = "sensor_co2"
+		pkg = "sensor_co2"
+		type = "final_ams_iaqcore.py"
+	/>
+
+</launch>
